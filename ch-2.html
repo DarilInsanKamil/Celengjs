@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>challange-2</title>
+</head>
+<p id="demo"></p>
+<body>
+        <style>
+        body {
+                background-color: black;
+                font: 20px/32px Montserrat, san-serif; 
+                color: antiquewhite;
+                
+        }
+        </style>
+     <script>
+function deretKasku(n){
+        var arr = [];
+        var x = 3;
+        for (var i = 0; i < n; i++) {
+          if(x % 6 == 0 && x % 5 == 0){
+            arr[i] = 'KASKUS';
+          }else if (x % 6 == 0) {
+            arr[i] = 'KUS';
+          }else if (x % 5 == 0) {
+            arr[i] = 'KAS';
+          }else{
+            arr[i] = x;
+          }
+          x = x + 3;
+        }
+        return arr;
+      }
+
+        document.getElementById("demo").innerHTML = deretKasku(10);
+</script>
+</body>
+</html>
